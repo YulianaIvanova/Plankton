@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a7320a0b3991868d2bd5be00dbed9b19 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+                 bottom: 50px; left: 50px; width: 250px; height: 120px; 
+                 background-color: white; z-index:9999; font-size:14px;
+                 border:2px solid grey; padding: 10px;">
+     <b>Название кластеров</b><br>
+     <i class="fa fa-circle" style="color:#0072B2"></i> Река<br>
+     <i class="fa fa-circle" style="color:#CC79A7"></i> Озеро<br>
+     <i class="fa fa-circle" style="color:#009E73"></i> Куйбышевское водохранилище<br>
+     </div>
+    
+    
+            <div class="folium-map" id="map_a7320a0b3991868d2bd5be00dbed9b19" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a7320a0b3991868d2bd5be00dbed9b19 = L.map(
+                "map_a7320a0b3991868d2bd5be00dbed9b19",
+                {
+                    center: [53.36651212299465, 49.31256121390375],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+
+            
+
+        
+    
+            var tile_layer_4cfa62c681895b02bf658266ed6f4445 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4cfa62c681895b02bf658266ed6f4445.addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            var circle_marker_8f9b940579da5664d0054bc9548cbebf = L.circleMarker(
+                [53.513733, 49.032217],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8f9b940579da5664d0054bc9548cbebf.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. В6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_db9a989a1c3893b7344791d4ed2be831 = L.circleMarker(
+                [53.51255, 49.015333],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_db9a989a1c3893b7344791d4ed2be831.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. В3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_019fa413e7af1b3df6bfd80b0020017f = L.circleMarker(
+                [53.522833, 49.037383],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_019fa413e7af1b3df6bfd80b0020017f.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. В7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4386b9cb93a178e5ed4b8389962f06f6 = L.circleMarker(
+                [53.503167, 49.0999],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4386b9cb93a178e5ed4b8389962f06f6.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Н7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b562869aa214d4982e1385c0b17002f8 = L.circleMarker(
+                [53.505383, 49.198183],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b562869aa214d4982e1385c0b17002f8.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e601214944c793a4e175d4843be53c4 = L.circleMarker(
+                [53.506883, 49.226633],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_3e601214944c793a4e175d4843be53c4.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b829aaf42fec30d0647f2a23fcf0de9 = L.circleMarker(
+                [53.412183, 49.213567],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_6b829aaf42fec30d0647f2a23fcf0de9.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2becb2d9a2c2c12208ea90920aa312b7 = L.circleMarker(
+                [53.42775, 49.073917],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_2becb2d9a2c2c12208ea90920aa312b7.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f18f4b6b02325727b02c0fb6394f7056 = L.circleMarker(
+                [53.396868, 49.283437],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f18f4b6b02325727b02c0fb6394f7056.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр.,ст. 3 ниже Усы
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44a91624b5c09a20ef8de641b12cb258 = L.circleMarker(
+                [53.26526, 48.926013],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_44a91624b5c09a20ef8de641b12cb258.bindTooltip(
+                `<div>
+                     Усинский залив,ст.5 Миронов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcd879e284708ea0907bb8589485b08f = L.circleMarker(
+                [53.275195, 49.116005],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_fcd879e284708ea0907bb8589485b08f.bindTooltip(
+                `<div>
+                     Усинкий залив,ст.6 Междуреченск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58ceb2fa931dbd37b47697b2adf2d6d0 = L.circleMarker(
+                [54.039711, 49.40715],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_58ceb2fa931dbd37b47697b2adf2d6d0.bindTooltip(
+                `<div>
+                     Залив Черемшан
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a43349770df1a5a69c62ef3f1fb16ec = L.circleMarker(
+                [53.352871, 49.242883],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_5a43349770df1a5a69c62ef3f1fb16ec.bindTooltip(
+                `<div>
+                     Усинский залив, у г. Плешка_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a778292686892447bc24a7c03576a5b8 = L.circleMarker(
+                [53.4412, 49.673833],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a778292686892447bc24a7c03576a5b8.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Бахилова поляна
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_219bc5bda4c10501367e3f3aa43b9833 = L.circleMarker(
+                [53.188067, 49.366467],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_219bc5bda4c10501367e3f3aa43b9833.bindTooltip(
+                `<div>
+                     Саратовское вдхр., ниже с. Брусяны
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18b92b176b36b1c11f6378be59f6c39f = L.circleMarker(
+                [52.863383, 48.585467],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_18b92b176b36b1c11f6378be59f6c39f.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Приволжье
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e64aee21cf64bedd867040f05dfb857 = L.circleMarker(
+                [52.815436, 48.388932],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7e64aee21cf64bedd867040f05dfb857.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Аграфеновский рынок
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73125ad556893cc5ef1b637847bd4944 = L.circleMarker(
+                [53.408783, 50.12805],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_73125ad556893cc5ef1b637847bd4944.bindTooltip(
+                `<div>
+                     Саратовское вдхр., ниже устья р. Сок
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c46b0b20c4bc947e7fde3305527624aa = L.circleMarker(
+                [53.165183, 50.053],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c46b0b20c4bc947e7fde3305527624aa.bindTooltip(
+                `<div>
+                     Саратовское вдхр., устье р. Самарка_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0cdd25393da31d83735688aadd289c48 = L.circleMarker(
+                [52.320983, 48.039317],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_0cdd25393da31d83735688aadd289c48.bindTooltip(
+                `<div>
+                     Саратовское вдхр., выше п. Алексеевка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ac8481dbe70a1214c8118b7df690758 = L.circleMarker(
+                [53.46625, 49.216567],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_5ac8481dbe70a1214c8118b7df690758.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ebfadc8c602133feb6f3498c0d8401e = L.circleMarker(
+                [53.464667, 49.130283],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_1ebfadc8c602133feb6f3498c0d8401e.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e6a69950828ae0f7bb9779acc5be9e5 = L.circleMarker(
+                [53.435983, 49.445933],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_5e6a69950828ae0f7bb9779acc5be9e5.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7a038d4e814d458514d518fc6956b6b = L.circleMarker(
+                [53.377077, 49.248975],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f7a038d4e814d458514d518fc6956b6b.bindTooltip(
+                `<div>
+                     Усинский залив, ст. 2 устье Усы
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c79693b561faac92708540fdb7352b7 = L.circleMarker(
+                [53.464717, 49.349833],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_2c79693b561faac92708540fdb7352b7.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76621338da4e8c5c374521c9050de5c9 = L.circleMarker(
+                [53.398824, 49.181787],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_76621338da4e8c5c374521c9050de5c9.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр., ст. 1 выше березовки
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c5f29d15c48fcc9fe1237026e0f9e36 = L.circleMarker(
+                [53.374913, 48.646578],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_0c5f29d15c48fcc9fe1237026e0f9e36.bindTooltip(
+                `<div>
+                     с.п. Шигоны,ст.4 перед Шигонами
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51538a0f99b1d1d0ce1107ea691508d6 = L.circleMarker(
+                [53.390548, 48.597186],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_51538a0f99b1d1d0ce1107ea691508d6.bindTooltip(
+                `<div>
+                     р. Уса, ст. 8 Малячкино
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d78c6cd289114612bbf82bf0d3527362 = L.circleMarker(
+                [53.440067, 49.29225],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_d78c6cd289114612bbf82bf0d3527362.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c43445a505f081a8208286cb342b730 = L.circleMarker(
+                [52.155383, 47.896167],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4c43445a505f081a8208286cb342b730.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Меровка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4e1118074b46641ffb32dff9617acc61 = L.circleMarker(
+                [53.188067, 49.366467],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4e1118074b46641ffb32dff9617acc61.bindTooltip(
+                `<div>
+                     Саратовское вдхр., ниже с. Брусяны_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72c2bf263ca7ff4246dead1c5e03601c = L.circleMarker(
+                [52.194767, 47.910817],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_72c2bf263ca7ff4246dead1c5e03601c.bindTooltip(
+                `<div>
+                     Саратовское вдхр., выше с. Богородское
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5faae16491ef90f289630c54ed86d98 = L.circleMarker(
+                [52.863383, 48.585467],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b5faae16491ef90f289630c54ed86d98.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Приволжье_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb55a64eaa8b21db410d3822c96fac53 = L.circleMarker(
+                [53.375933, 49.255167],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_eb55a64eaa8b21db410d3822c96fac53.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75e9e360fcbf5afcdd457a562f70d722 = L.circleMarker(
+                [53.284226, 49.202571],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_75e9e360fcbf5afcdd457a562f70d722.bindTooltip(
+                `<div>
+                     Усинский залив, ст. № 5 расширение ниже Междуреченск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8212919e1024619cd4e959c85e91de4 = L.circleMarker(
+                [53.191783, 49.939517],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f8212919e1024619cd4e959c85e91de4.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Шелехметская пойма
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a15875a72872ebc2670d06d4b358b353 = L.circleMarker(
+                [52.6321, 48.27695],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a15875a72872ebc2670d06d4b358b353.bindTooltip(
+                `<div>
+                     Саратовское вдхр., против р. Чагра_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1da63c773c01214d6b56fd42a4237405 = L.circleMarker(
+                [52.191767, 47.94455],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_1da63c773c01214d6b56fd42a4237405.bindTooltip(
+                `<div>
+                     Саратовское вдхр., против р. Малый Иргиз_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2786695a22e9615ab7430f026d61d855 = L.circleMarker(
+                [53.154217, 48.546833],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_2786695a22e9615ab7430f026d61d855.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Сызрань
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a951d4d87c12f0ac82b21ab1f3fb8c8b = L.circleMarker(
+                [53.270442, 48.856084],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a951d4d87c12f0ac82b21ab1f3fb8c8b.bindTooltip(
+                `<div>
+                     Усинский залив, ст. 8. Печерские выселки
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7c7e452689ca658001e923d38c1c95f = L.circleMarker(
+                [53.47025, 49.2919],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b7c7e452689ca658001e923d38c1c95f.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0de1a8a1481cfe9bc929942b4fcde654 = L.circleMarker(
+                [53.464067, 49.43755],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_0de1a8a1481cfe9bc929942b4fcde654.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9194e98c04300e572a770815b203e061 = L.circleMarker(
+                [53.398567, 49.26675],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9194e98c04300e572a770815b203e061.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4fd3bd6e548aa3e313aa8a9df7a03c2 = L.circleMarker(
+                [53.4848, 49.179567],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c4fd3bd6e548aa3e313aa8a9df7a03c2.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.39
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e8203c00bae2ef0b3b09b0548a443f1 = L.circleMarker(
+                [53.392267, 49.133667],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9e8203c00bae2ef0b3b09b0548a443f1.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_955893349f5a2e416c583b0ec3ae6206 = L.circleMarker(
+                [53.42235, 49.367133],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_955893349f5a2e416c583b0ec3ae6206.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85af469379142b97278828600394c3d1 = L.circleMarker(
+                [53.493433, 49.258067],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_85af469379142b97278828600394c3d1.bindTooltip(
+                `<div>
+                     Куйбышесвкое вдхр. Т.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d37eb83dec6397910ab4fe8775282c05 = L.circleMarker(
+                [53.549974, 48.335514],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_d37eb83dec6397910ab4fe8775282c05.bindTooltip(
+                `<div>
+                     р. Уса, ст. 7 Гаврилкино
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f3c1ea592f4850df530e0b20eb621b9 = L.circleMarker(
+                [53.267345, 48.843576],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_5f3c1ea592f4850df530e0b20eb621b9.bindTooltip(
+                `<div>
+                     Усинский залив, Печерские выс.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddf8ac1f7d7382e96fca2f1a7067a9a2 = L.circleMarker(
+                [53.352871, 49.242883],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ddf8ac1f7d7382e96fca2f1a7067a9a2.bindTooltip(
+                `<div>
+                     Усинский залив, у г. Плешка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f1595bb9c42134e29941ff96701b416 = L.circleMarker(
+                [53.353089, 49.218683],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8f1595bb9c42134e29941ff96701b416.bindTooltip(
+                `<div>
+                     Усинский залив, ст. № 4 расширение в устье у г. Плешка (корабль)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03931fcaaa45069db9ad9e3fcb5a442e = L.circleMarker(
+                [53.373149, 49.247582],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_03931fcaaa45069db9ad9e3fcb5a442e.bindTooltip(
+                `<div>
+                     Усинский залив, ст. № 3 устье залива, чуть выше ЛЭП
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff05d30949604e03f37e423d3e590f42 = L.circleMarker(
+                [53.28735, 49.090458],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ff05d30949604e03f37e423d3e590f42.bindTooltip(
+                `<div>
+                     Усинский залив, ст. 6. узость выше Междуреченск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c2706ba64a9ad56fc966cf219383290 = L.circleMarker(
+                [53.275715, 48.94657],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7c2706ba64a9ad56fc966cf219383290.bindTooltip(
+                `<div>
+                     Усинский залив, ст. 7. узость ниже Миронов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd0719986bef61c1397fb22368053405 = L.circleMarker(
+                [53.89814, 49.189578],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_bd0719986bef61c1397fb22368053405.bindTooltip(
+                `<div>
+                     Залив Сускан
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1be115ea1c36c85ce8a712143b39e4e = L.circleMarker(
+                [53.165867, 50.056717],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a1be115ea1c36c85ce8a712143b39e4e.bindTooltip(
+                `<div>
+                     Саратовское вдхр., устье р. Самарка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f3c5e40d2caeb73eecbc3d2fb390302 = L.circleMarker(
+                [53.409, 50.126883],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9f3c5e40d2caeb73eecbc3d2fb390302.bindTooltip(
+                `<div>
+                     Саратовское вдхр., устье р. Сок
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26e760d436d0d108083caa0c2869f85f = L.circleMarker(
+                [53.2765, 50.173],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_26e760d436d0d108083caa0c2869f85f.bindTooltip(
+                `<div>
+                     Саратовское вдхр., выше г. Самара
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7478f15d71ff70dbc61a59df19b90ab = L.circleMarker(
+                [53.371933, 50.146383],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a7478f15d71ff70dbc61a59df19b90ab.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Гаврилова поляна
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1836cd13d6b7742ba84c4497f872b0c6 = L.circleMarker(
+                [53.143467, 49.58825],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_1836cd13d6b7742ba84c4497f872b0c6.bindTooltip(
+                `<div>
+                     Саратовское вдхр., у устья р. Чапаевка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_733156de34d0769bcf6e60f42ef8dea9 = L.circleMarker(
+                [53.1558, 49.614883],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_733156de34d0769bcf6e60f42ef8dea9.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Ермаково
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da31a37e9b024950bf729f9162b00098 = L.circleMarker(
+                [53.239333, 49.12545],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_da31a37e9b024950bf729f9162b00098.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Печерское
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b86f14f71fc8c87c98bc24821c511b10 = L.circleMarker(
+                [53.054383, 48.44685],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b86f14f71fc8c87c98bc24821c511b10.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Кашпир
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b92a0d111bc09035fe17291708969f67 = L.circleMarker(
+                [52.6321, 48.27695],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b92a0d111bc09035fe17291708969f67.bindTooltip(
+                `<div>
+                     Саратовское вдхр., против р. Чагра
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f3ecebdf1b4b56ecb031c8914baa377 = L.circleMarker(
+                [52.191767, 47.94455],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7f3ecebdf1b4b56ecb031c8914baa377.bindTooltip(
+                `<div>
+                     Саратовское вдхр., против р. Малый Иргиз
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7cb539721131c25d3993ab6815bb17ff = L.circleMarker(
+                [52.306333, 48.0451],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7cb539721131c25d3993ab6815bb17ff.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Алексеевка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66d6749bff6dc5759912f7a7cff3138c = L.circleMarker(
+                [52.08055, 47.831417],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_66d6749bff6dc5759912f7a7cff3138c.bindTooltip(
+                `<div>
+                     Саратовское вдхр., выше Балаково
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d15668b131211eceeaa9c2f47441843 = L.circleMarker(
+                [52.511233, 48.1128],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4d15668b131211eceeaa9c2f47441843.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Хвалынск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01fdfea5692dee1302bf78e0b1c2a9b1 = L.circleMarker(
+                [53.4412, 49.673833],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_01fdfea5692dee1302bf78e0b1c2a9b1.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Бахилова поляна_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8447b6dd55c2109b49f78c7073e264b8 = L.circleMarker(
+                [53.2765, 50.178],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8447b6dd55c2109b49f78c7073e264b8.bindTooltip(
+                `<div>
+                     Саратовское вдхр., выше г. Самара_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bdb815ae81175188f67a3638f3836a99 = L.circleMarker(
+                [53.371183, 50.143933],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_bdb815ae81175188f67a3638f3836a99.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Гаврилова поляна_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ba170e979f4708633d4623fd3977dd4 = L.circleMarker(
+                [53.143467, 49.58825],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8ba170e979f4708633d4623fd3977dd4.bindTooltip(
+                `<div>
+                     Саратовское вдхр., у устья р. Чапаевка_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_881c6906a0f4bce318688129cc27ca89 = L.circleMarker(
+                [53.15425, 49.618083],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_881c6906a0f4bce318688129cc27ca89.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Ермаково_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7492718289f04cddf3ae1eb217f4653d = L.circleMarker(
+                [53.054383, 48.44685],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7492718289f04cddf3ae1eb217f4653d.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Кашпир_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a27879ecbd5eaa9346aac7b5757a9e58 = L.circleMarker(
+                [53.154217, 48.546833],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a27879ecbd5eaa9346aac7b5757a9e58.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Сызрань_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a06ed5b8e1ed752a70deab5e38627a0 = L.circleMarker(
+                [52.7103, 48.34075],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9a06ed5b8e1ed752a70deab5e38627a0.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Екатериновка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e7927999cf73bbca8d4948d37a1fffe = L.circleMarker(
+                [52.488917, 48.12195],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9e7927999cf73bbca8d4948d37a1fffe.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Хвалынск_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6466816e2612465c0f58ed09bf0b2235 = L.circleMarker(
+                [53.190433, 49.932333],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_6466816e2612465c0f58ed09bf0b2235.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Шелехметская пойма_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bb8fd2170ab7623f4d41c3b054b8dec = L.circleMarker(
+                [52.062083, 47.792167],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4bb8fd2170ab7623f4d41c3b054b8dec.bindTooltip(
+                `<div>
+                     Саратовское вдхр., Балаково
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea1c4790ebb35f66bd31f07a2503a476 = L.circleMarker(
+                [53.548834, 49.545033],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ea1c4790ebb35f66bd31f07a2503a476.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dffce49c7173eee6a03fa9a77364aa9a = L.circleMarker(
+                [53.548834, 49.545033],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_dffce49c7173eee6a03fa9a77364aa9a.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 1_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5a1685aca8a30b2b6457c58642baf37 = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a5a1685aca8a30b2b6457c58642baf37.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39fcd9b3e70794e2a4b48877c6080a6e = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_39fcd9b3e70794e2a4b48877c6080a6e.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7301580f164b2bd1c2174d7a613daa41 = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7301580f164b2bd1c2174d7a613daa41.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99311487eea9a7ddd3bae75f1e25d98c = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_99311487eea9a7ddd3bae75f1e25d98c.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a88a767c9441ac1e204b3c4e1e454f5 = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7a88a767c9441ac1e204b3c4e1e454f5.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40ce049660dde2accda365b126cb4da9 = L.circleMarker(
+                [53.500428, 49.501679],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_40ce049660dde2accda365b126cb4da9.bindTooltip(
+                `<div>
+                     Восьмерка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86a1e06574f17759c44a83b3f792b096 = L.circleMarker(
+                [53.500428, 49.501679],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_86a1e06574f17759c44a83b3f792b096.bindTooltip(
+                `<div>
+                     Восьмерка_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bde3a6de0c29595a1022f213ce62494a = L.circleMarker(
+                [53.500428, 49.501679],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_bde3a6de0c29595a1022f213ce62494a.bindTooltip(
+                `<div>
+                     Восьмерка_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ff79e6b09316f5d5a73e4c05647025a = L.circleMarker(
+                [53.500428, 49.501679],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8ff79e6b09316f5d5a73e4c05647025a.bindTooltip(
+                `<div>
+                     Восьмерка_3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d09463f3d794f4b8316ac09bdcfcae69 = L.circleMarker(
+                [53.491293, 49.506052],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_d09463f3d794f4b8316ac09bdcfcae69.bindTooltip(
+                `<div>
+                     Пляжное
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfd8a649acfd84785a2a7311b0f08686 = L.circleMarker(
+                [53.491293, 49.506052],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_dfd8a649acfd84785a2a7311b0f08686.bindTooltip(
+                `<div>
+                     Пляжное_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_726722f2bf0b1d91d79b394c61884e7d = L.circleMarker(
+                [53.491293, 49.506052],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_726722f2bf0b1d91d79b394c61884e7d.bindTooltip(
+                `<div>
+                     Пляжное_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5af0977331cbbc83e8ca45cd1dbf265 = L.circleMarker(
+                [53.491293, 49.506052],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b5af0977331cbbc83e8ca45cd1dbf265.bindTooltip(
+                `<div>
+                     Пляжное_3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9adaf7ca5e588f5862743637c56a5494 = L.circleMarker(
+                [53.509612, 49.504162],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9adaf7ca5e588f5862743637c56a5494.bindTooltip(
+                `<div>
+                     Порфирьевское
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2dcb73344fd72fe44249f3c0051c75c = L.circleMarker(
+                [53.528555, 49.515464],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c2dcb73344fd72fe44249f3c0051c75c.bindTooltip(
+                `<div>
+                     Прудовиков
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8b739a2cb9ae57542f4cbb3f9148628 = L.circleMarker(
+                [53.528555, 49.515464],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f8b739a2cb9ae57542f4cbb3f9148628.bindTooltip(
+                `<div>
+                     Прудовиков_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de95d31e6078f175f4993703adce0c34 = L.circleMarker(
+                [53.528555, 49.515464],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_de95d31e6078f175f4993703adce0c34.bindTooltip(
+                `<div>
+                     Прудовиков_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f1539782af4ab66a4e2971ee5189d1a = L.circleMarker(
+                [53.528555, 49.515464],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9f1539782af4ab66a4e2971ee5189d1a.bindTooltip(
+                `<div>
+                     Прудовиков_3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fcd44ca903a11cf1992e05a1fcfa06f = L.circleMarker(
+                [53.229065, 50.485235],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9fcd44ca903a11cf1992e05a1fcfa06f.bindTooltip(
+                `<div>
+                     Алексеевское
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_abec0084f430ddb9cce7d8672e0cad8b = L.circleMarker(
+                [53.277741, 50.826151],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_abec0084f430ddb9cce7d8672e0cad8b.bindTooltip(
+                `<div>
+                     Широкое
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18e3286cf726377410ddcc3f9dd9daba = L.circleMarker(
+                [53.261201, 50.834091],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_18e3286cf726377410ddcc3f9dd9daba.bindTooltip(
+                `<div>
+                     Широкое_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca823fbfb95e03fcca9b630b9b184ac6 = L.circleMarker(
+                [53.25759, 50.585934],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ca823fbfb95e03fcca9b630b9b184ac6.bindTooltip(
+                `<div>
+                     Новый Карьер (Кинельский р-н)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed75ba9551995ddfbc48d533f3a1604c = L.circleMarker(
+                [53.25759, 50.585934],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ed75ba9551995ddfbc48d533f3a1604c.bindTooltip(
+                `<div>
+                     Новый Карьер (Кинельский р-н)_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ed5a54e53d1d83c66e51ee2e853175f = L.circleMarker(
+                [53.204194, 50.514324],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4ed5a54e53d1d83c66e51ee2e853175f.bindTooltip(
+                `<div>
+                     Лесное
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcd2a184fcdebab8179995a9e8e2cbcd = L.circleMarker(
+                [53.110047, 50.16991],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_fcd2a184fcdebab8179995a9e8e2cbcd.bindTooltip(
+                `<div>
+                     Яицкое
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53b2f72394fca60d3c8f79c2e994a15c = L.circleMarker(
+                [53.108976, 50.216459],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_53b2f72394fca60d3c8f79c2e994a15c.bindTooltip(
+                `<div>
+                     Песчаное
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8513c37e2057de90726e5dd631446793 = L.circleMarker(
+                [53.048941, 50.226985],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8513c37e2057de90726e5dd631446793.bindTooltip(
+                `<div>
+                     Пруд пос. Самарское
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f34c08f7b80d2e012e09babefcd8d507 = L.circleMarker(
+                [53.2182, 49.977468],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f34c08f7b80d2e012e09babefcd8d507.bindTooltip(
+                `<div>
+                     Б. Островное
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52534cf6215e544b41031b6280961329 = L.circleMarker(
+                [53.240828, 49.846113],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_52534cf6215e544b41031b6280961329.bindTooltip(
+                `<div>
+                     Шелехметское, т.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc219eee4fbc546384aaa15ebce074c5 = L.circleMarker(
+                [53.248865, 49.924138],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_cc219eee4fbc546384aaa15ebce074c5.bindTooltip(
+                `<div>
+                     Шелехметское, т.2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_108b4074c1798bd35670382d0226a659 = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_108b4074c1798bd35670382d0226a659.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38408f4910bd94552989b24f099d9dd1 = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_38408f4910bd94552989b24f099d9dd1.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71b98610bda34aa3afe0dc19ca0eb365 = L.circleMarker(
+                [53.536344, 49.519667],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_71b98610bda34aa3afe0dc19ca0eb365.bindTooltip(
+                `<div>
+                     Б.Васильевское, ст. 3_7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c97df42991b5c003fb0a1e818bc8e513 = L.circleMarker(
+                [53.491293, 49.506052],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c97df42991b5c003fb0a1e818bc8e513.bindTooltip(
+                `<div>
+                     Пляжное_4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f1758e027ad4974bd4366a1d4a73d7f = L.circleMarker(
+                [53.509399, 49.5043],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_0f1758e027ad4974bd4366a1d4a73d7f.bindTooltip(
+                `<div>
+                     Порфирьевское_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b99699b5e374f3857f900fe2daf3498 = L.circleMarker(
+                [53.509399, 49.5043],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7b99699b5e374f3857f900fe2daf3498.bindTooltip(
+                `<div>
+                     Порфирьевское_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1bf82c2424a27c4249ecdde416db7611 = L.circleMarker(
+                [53.528474, 49.515866],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_1bf82c2424a27c4249ecdde416db7611.bindTooltip(
+                `<div>
+                     Прудовиков_4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f8c95583cbb9fe6e7711199181f6259 = L.circleMarker(
+                [53.528474, 49.515866],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4f8c95583cbb9fe6e7711199181f6259.bindTooltip(
+                `<div>
+                     Прудовиков_5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1f75cd673dbfc3cad8cb281b68e88da = L.circleMarker(
+                [53.261201, 50.834091],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c1f75cd673dbfc3cad8cb281b68e88da.bindTooltip(
+                `<div>
+                     Широкое_2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fcc7f0525605bca162304389845b61c = L.circleMarker(
+                [53.106075, 50.175962],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7fcc7f0525605bca162304389845b61c.bindTooltip(
+                `<div>
+                     Яицкое_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13b0f246fb810e0f6ea7307465fa4979 = L.circleMarker(
+                [53.048278, 50.231998],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_13b0f246fb810e0f6ea7307465fa4979.bindTooltip(
+                `<div>
+                     Пруд пос. Самарское_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a366b8b31f6ab1d77bda6450c74b5c4 = L.circleMarker(
+                [53.037458, 49.494133],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9a366b8b31f6ab1d77bda6450c74b5c4.bindTooltip(
+                `<div>
+                     Б. Ильмень
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0060fdf0f400316e21fe4b9abc05c52 = L.circleMarker(
+                [52.995576, 49.657941],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a0060fdf0f400316e21fe4b9abc05c52.bindTooltip(
+                `<div>
+                     Ильмень (Чапаевск)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86bd879496c754f9ccf6591ac81a686c = L.circleMarker(
+                [52.991784, 49.591546],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_86bd879496c754f9ccf6591ac81a686c.bindTooltip(
+                `<div>
+                     Лебяжье (Чапаевск)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4736105eba8e32182edff9a3f3bec524 = L.circleMarker(
+                [53.062937, 49.704312],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4736105eba8e32182edff9a3f3bec524.bindTooltip(
+                `<div>
+                     Лебяжье 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0760f376a8a0f8b370775a356f0f2cd5 = L.circleMarker(
+                [53.032244, 49.709503],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_0760f376a8a0f8b370775a356f0f2cd5.bindTooltip(
+                `<div>
+                     Березовое
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dcb50ffe7fccce79e2f9592f48b460e8 = L.circleMarker(
+                [53.005869, 49.70499],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_dcb50ffe7fccce79e2f9592f48b460e8.bindTooltip(
+                `<div>
+                     р. Чамаевка у плотины, почти не течет
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6dd4ef28d73b7bd1e812558c82396d3 = L.circleMarker(
+                [53.218548, 49.98462],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b6dd4ef28d73b7bd1e812558c82396d3.bindTooltip(
+                `<div>
+                     Б. Островное_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c380f368b3f53de9637c722bae26b7fc = L.circleMarker(
+                [53.240828, 49.846113],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c380f368b3f53de9637c722bae26b7fc.bindTooltip(
+                `<div>
+                     Шелехметское, т.1_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c61c86ede988e19ad428ca3ef0d326c5 = L.circleMarker(
+                [53.904267, 49.473014],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_c61c86ede988e19ad428ca3ef0d326c5.bindTooltip(
+                `<div>
+                     пруд на р. Бирля
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_67de6a650a5d67e61aa4ee6ad086714c = L.circleMarker(
+                [53.170424, 51.396464],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_67de6a650a5d67e61aa4ee6ad086714c.bindTooltip(
+                `<div>
+                     Кутулукское водохранилище, т.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f71802525bcfe966ef296bb398fbed04 = L.circleMarker(
+                [53.181671, 51.384921],
+                {"bubblingMouseEvents": true, "color": "#CC79A7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CC79A7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f71802525bcfe966ef296bb398fbed04.bindTooltip(
+                `<div>
+                     Кутулукское водохранилище, т.2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6ada42ed9cda93f876f7eeea540a402 = L.circleMarker(
+                [53.849027, 49.198397],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a6ada42ed9cda93f876f7eeea540a402.bindTooltip(
+                `<div>
+                     Сускан-залив
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_097afd8e1d4c56a3b1797cf7dc2aae76 = L.circleMarker(
+                [53.838869, 49.187642],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_097afd8e1d4c56a3b1797cf7dc2aae76.bindTooltip(
+                `<div>
+                     Сускан
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72ea61fe8a32d2d064cb8f696d3fa38b = L.circleMarker(
+                [53.839679, 49.199746],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_72ea61fe8a32d2d064cb8f696d3fa38b.bindTooltip(
+                `<div>
+                     Сускан-пруд
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc6bc8cacfb380a2529ebee4401112de = L.circleMarker(
+                [53.839679, 49.199746],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_cc6bc8cacfb380a2529ebee4401112de.bindTooltip(
+                `<div>
+                     Суск.пруд
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8673ac332b496758316d008a99b09664 = L.circleMarker(
+                [55.947966, 48.05137],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8673ac332b496758316d008a99b09664.bindTooltip(
+                `<div>
+                     ст. 1.Звенигово
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b8a6123172d8694889ee8f53f43774e = L.circleMarker(
+                [55.802431, 48.684196],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_1b8a6123172d8694889ee8f53f43774e.bindTooltip(
+                `<div>
+                     ст. 2.Свияжск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5782012eca6a1d695217c8c0e600326 = L.circleMarker(
+                [55.531575, 49.014066],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_d5782012eca6a1d695217c8c0e600326.bindTooltip(
+                `<div>
+                     ст. 3.Шеланга
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8cdb45841bbd9a3a225b5913ea10123f = L.circleMarker(
+                [55.462715, 51.384589],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8cdb45841bbd9a3a225b5913ea10123f.bindTooltip(
+                `<div>
+                     ст. 5.Камские поляны
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d8caa881c7f527dd3ed96a9b6202147 = L.circleMarker(
+                [55.208993, 49.360643],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_5d8caa881c7f527dd3ed96a9b6202147.bindTooltip(
+                `<div>
+                     ст. 8.Камское Устье в зоне слияния визуально
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ead5b5d9238118cc6ad23dd831673d84 = L.circleMarker(
+                [54.94704, 48.864993],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ead5b5d9238118cc6ad23dd831673d84.bindTooltip(
+                `<div>
+                     ст. 9.Тетюши
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19da4c07ad28ec270feb91e5bf8b1f00 = L.circleMarker(
+                [54.631835, 48.843952],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_19da4c07ad28ec270feb91e5bf8b1f00.bindTooltip(
+                `<div>
+                     ст. 10.Ст. Майна
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b714b57555a44ba4079a34b123900fa3 = L.circleMarker(
+                [54.596852, 48.460656],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b714b57555a44ba4079a34b123900fa3.bindTooltip(
+                `<div>
+                     ст. 11.Ундоры
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30e91b8ce3d25817513980699f78f865 = L.circleMarker(
+                [54.297324, 48.433262],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_30e91b8ce3d25817513980699f78f865.bindTooltip(
+                `<div>
+                     ст. 12.Ульяновск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58ebf3f21db16db81722664deb89a2ae = L.circleMarker(
+                [54.10798, 48.551765],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_58ebf3f21db16db81722664deb89a2ae.bindTooltip(
+                `<div>
+                     cт. 13.Криуши (залив)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_577466a6a42617f0ad01fb3a91fe2fae = L.circleMarker(
+                [53.967541, 48.806236],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_577466a6a42617f0ad01fb3a91fe2fae.bindTooltip(
+                `<div>
+                     ст. 14. Сенгилей
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8010d8e16bb0e65ce95485cc4eb95340 = L.circleMarker(
+                [53.506365, 49.219999],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8010d8e16bb0e65ce95485cc4eb95340.bindTooltip(
+                `<div>
+                     т.3 Подстепки/Приморский (т.39)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b04e64bc287d6d392062b9b8464785d = L.circleMarker(
+                [53.407547, 49.237755],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_2b04e64bc287d6d392062b9b8464785d.bindTooltip(
+                `<div>
+                     ст. 16 (34). напротив Усы
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01601da62f8138352349ff2cb876eb72 = L.circleMarker(
+                [53.437617, 49.454139],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_01601da62f8138352349ff2cb876eb72.bindTooltip(
+                `<div>
+                     ст. 17.Приплотинный участок (ретранслтор примерно)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d5005ba74ff9126eb138acb631a06ee = L.circleMarker(
+                [53.469118, 49.46813],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8d5005ba74ff9126eb138acb631a06ee.bindTooltip(
+                `<div>
+                     Речной Порт Тольятти
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa6cdd73ef944fce38c31545c90084e4 = L.circleMarker(
+                [53.4425, 49.661111],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_aa6cdd73ef944fce38c31545c90084e4.bindTooltip(
+                `<div>
+                     т.1 Бахилово-русло
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a05e52d3c85c886675330295ef8b4e9 = L.circleMarker(
+                [53.421944, 50.033056],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8a05e52d3c85c886675330295ef8b4e9.bindTooltip(
+                `<div>
+                     т.2 Ширяево-русло
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c9839e0baaca305ca32de4da1c3dc0e = L.circleMarker(
+                [53.400833, 50.126667],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_3c9839e0baaca305ca32de4da1c3dc0e.bindTooltip(
+                `<div>
+                     т.3 Сок - зона слияния
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3db9b10cb2eb2d1e663c9994e4919bcb = L.circleMarker(
+                [53.418333, 50.151111],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_3db9b10cb2eb2d1e663c9994e4919bcb.bindTooltip(
+                `<div>
+                     т.4 Сок -  устье (после а/в моста)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eabb4208acddb895c61f7d168b83fe83 = L.circleMarker(
+                [53.201111, 50.077778],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_eabb4208acddb895c61f7d168b83fe83.bindTooltip(
+                `<div>
+                     т.5 г.Самара 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c69a2493a76fab9226d30729f08f4a4 = L.circleMarker(
+                [53.166298, 50.051798],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_2c69a2493a76fab9226d30729f08f4a4.bindTooltip(
+                `<div>
+                     т.6 напротив р.Самарка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3c799b138d4ef84efdfa4356914a6a2 = L.circleMarker(
+                [53.148333, 49.596944],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f3c799b138d4ef84efdfa4356914a6a2.bindTooltip(
+                `<div>
+                     т.7 напротив р.Чапаевка 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8467b4e196c3a193f2d11bd64d25f3da = L.circleMarker(
+                [53.136105, 48.500608],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_8467b4e196c3a193f2d11bd64d25f3da.bindTooltip(
+                `<div>
+                     т.8 Сызрань
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25b1294509b2b464bf4fdc34e048585b = L.circleMarker(
+                [52.854722, 48.554722],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_25b1294509b2b464bf4fdc34e048585b.bindTooltip(
+                `<div>
+                     т. 9 Приволжье
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb35279b91467cce031c2563667cfb91 = L.circleMarker(
+                [52.492973, 48.150254],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_fb35279b91467cce031c2563667cfb91.bindTooltip(
+                `<div>
+                     т. 10 Духовницкое/Хвалынск
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39540197eaeda215b9734a40ab9519a6 = L.circleMarker(
+                [52.164722, 47.900833],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_39540197eaeda215b9734a40ab9519a6.bindTooltip(
+                `<div>
+                     т.11 Малый Иргиз (его не видно)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78abf29d87f09dccf5374e3700e359be = L.circleMarker(
+                [52.059229, 47.770693],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_78abf29d87f09dccf5374e3700e359be.bindTooltip(
+                `<div>
+                     т.12 Балаково (перед плотиной)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_344212638337245f26bf47757fe4be9a = L.circleMarker(
+                [52.635556, 48.284444],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_344212638337245f26bf47757fe4be9a.bindTooltip(
+                `<div>
+                     т.13 Чагра (напротив Чагры, в саму реку не зашли. Стоим на русле Волги)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbb488b5eccb176bf89840b805c6c1c5 = L.circleMarker(
+                [53.4595, 49.356519],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_cbb488b5eccb176bf89840b805c6c1c5.bindTooltip(
+                `<div>
+                     т.1 Яхт клуб "Дружба"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9278c3d263a3a5c62e1cc3311714e624 = L.circleMarker(
+                [53.496583, 49.250405],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9278c3d263a3a5c62e1cc3311714e624.bindTooltip(
+                `<div>
+                     т.2 Набережная Авт.р-на
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d63d197ac430d617c86ed56ce9a8a80b = L.circleMarker(
+                [53.506365, 49.219999],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_d63d197ac430d617c86ed56ce9a8a80b.bindTooltip(
+                `<div>
+                     т.3 Подстепки/Приморский (т.39)_1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e970aca378f9ab5f28f8bf17f0b80ea4 = L.circleMarker(
+                [53.44616, 49.12259],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_e970aca378f9ab5f28f8bf17f0b80ea4.bindTooltip(
+                `<div>
+                     т.4 Середина плеса
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ade38bcd8c784195132076f80cf3ef32 = L.circleMarker(
+                [53.418131, 49.1076],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ade38bcd8c784195132076f80cf3ef32.bindTooltip(
+                `<div>
+                     т.5 Актуши/Усолье
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbc1a04e69542d4a531feabb1c92b9ba = L.circleMarker(
+                [53.414689, 49.19886],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_cbc1a04e69542d4a531feabb1c92b9ba.bindTooltip(
+                `<div>
+                     т.6 вышеУсинского залива
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa7e92e3e32771179af6e18bc58bfc8a = L.circleMarker(
+                [53.405257, 49.235239],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_fa7e92e3e32771179af6e18bc58bfc8a.bindTooltip(
+                `<div>
+                     т.7 (т.34) напротив Усы
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f971f4b1ebd8029f7c57081e7a6168fe = L.circleMarker(
+                [53.403933, 49.288771],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f971f4b1ebd8029f7c57081e7a6168fe.bindTooltip(
+                `<div>
+                     т.8 Ниже Усинского залива
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0671e32b345a7e0678e1048a200a0be3 = L.circleMarker(
+                [53.325965, 49.242614],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_0671e32b345a7e0678e1048a200a0be3.bindTooltip(
+                `<div>
+                     т.10 гора Плешка
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4677e33828be322c110b7e2f2900e11e = L.circleMarker(
+                [53.293899, 49.222072],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4677e33828be322c110b7e2f2900e11e.bindTooltip(
+                `<div>
+                     т.11  База отдыха "Услада"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4279f713f3fed9097eb6f96aafc5be20 = L.circleMarker(
+                [53.28735, 49.090458],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_4279f713f3fed9097eb6f96aafc5be20.bindTooltip(
+                `<div>
+                     т.12 выше Междуреченска
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7bc206685ee283a85c9658014da10606 = L.circleMarker(
+                [53.272346, 48.93216],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_7bc206685ee283a85c9658014da10606.bindTooltip(
+                `<div>
+                     т.13 Красный Миронов
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a90347d5fdcf81bba1d68d716ab6c7ac = L.circleMarker(
+                [53.27027, 48.862059],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_a90347d5fdcf81bba1d68d716ab6c7ac.bindTooltip(
+                `<div>
+                     т.14 Печерские Выселки
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_762c2f9463b1649e6c022c314c8503be = L.circleMarker(
+                [53.428317, 49.383715],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_762c2f9463b1649e6c022c314c8503be.bindTooltip(
+                `<div>
+                     т.15 Яблоневый овраг
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9014b03fd59636e5ee4155d7b0f9e0bf = L.circleMarker(
+                [53.439907, 49.457835],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_9014b03fd59636e5ee4155d7b0f9e0bf.bindTooltip(
+                `<div>
+                     т. 16 Ретранслятор
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_725c657d51a7704b35c39c4c00fcf62b = L.circleMarker(
+                [53.48927, 49.22983],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_725c657d51a7704b35c39c4c00fcf62b.bindTooltip(
+                `<div>
+                     т.39
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc6da1df7234283c295ecd1444d3b4c5 = L.circleMarker(
+                [53.44616, 49.12259],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_dc6da1df7234283c295ecd1444d3b4c5.bindTooltip(
+                `<div>
+                     Т.2 середина плеса
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f16a5c73cbc3cdf92a3777e1cd122109 = L.circleMarker(
+                [53.42507, 49.06466],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_f16a5c73cbc3cdf92a3777e1cd122109.bindTooltip(
+                `<div>
+                     Т.3 правый берег
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ede0dc6f78fbefbe3853929f753c7e78 = L.circleMarker(
+                [53.43268, 49.39568],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_ede0dc6f78fbefbe3853929f753c7e78.bindTooltip(
+                `<div>
+                     Яблоневый овраг
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cfe01f0df97c1567dfc1ab539b0f6fe0 = L.circleMarker(
+                [53.405257, 49.235239],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_cfe01f0df97c1567dfc1ab539b0f6fe0.bindTooltip(
+                `<div>
+                     т.34 сильный ветер
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8bc2308e1bbf80325e593559f67c91d = L.circleMarker(
+                [53.465298, 49.394911],
+                {"bubblingMouseEvents": true, "color": "#009E73", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009E73", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_b8bc2308e1bbf80325e593559f67c91d.bindTooltip(
+                `<div>
+                     Волна
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77b0d37301134004f36e5cf4fc04e8cb = L.circleMarker(
+                [53.684873, 48.8614],
+                {"bubblingMouseEvents": true, "color": "#0072B2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0072B2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_a7320a0b3991868d2bd5be00dbed9b19);
+        
+    
+            circle_marker_77b0d37301134004f36e5cf4fc04e8cb.bindTooltip(
+                `<div>
+                     ст. 15.Подвалье
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
